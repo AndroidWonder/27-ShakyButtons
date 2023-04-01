@@ -2,8 +2,10 @@ package com.course.example.shakybuttons;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.view.animation.Animation;
@@ -15,13 +17,13 @@ public class MainActivity extends AppCompatActivity {
     private Button button, button2, button3;
     private Animation shake, bounce, rotate;
     private MediaPlayer mp;
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //gewt references to the buttons on UI
+        //get references to the buttons on UI
         button = (Button)findViewById(R.id.button);
         button2 = (Button)findViewById(R.id.button2);
         button3 = (Button)findViewById(R.id.button3);
@@ -55,5 +57,6 @@ public class MainActivity extends AppCompatActivity {
                 mp.start();
             }
         });
+
     }
 }
